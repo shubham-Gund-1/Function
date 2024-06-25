@@ -1,6 +1,6 @@
 import java.util.*;
-public class Armstrong{
-    static void armstrong(){
+public class ArmstrongSec{
+    static String armstrong(){
         int i,n1,n,temp=1,sum=0;
         Scanner input=new Scanner(System.in);
         System.out.println("Enter a number :");
@@ -12,13 +12,14 @@ public class Armstrong{
             sum=sum+(n1*n1*n1);
         }
         if(temp==sum){
-            System.out.println("Armstrong number.");
+            return("Armstrong number.");
         }
         else{
-            System.out.println("Not armstrong number.");
+            return("Not armstrong number.");
         }
     }
     public static void main(String args[]){
-        armstrong();
+        String a=armstrong();
+        System.out.println(a);
     }
 }

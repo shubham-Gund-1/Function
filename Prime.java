@@ -1,25 +1,24 @@
 import java.util.*;
 public class Prime {
     static void prime() {
-        int i, j, n, count = 0;
-        int flag;
+        int i, j, n, flag;
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter a number :");
+        System.out.println("Enter a number:");
         n = input.nextInt();
-        System.out.println("First " + n + " prime numbers are:");
-        for (i = 2; count < n; i++) {
-            flag = 0;
-            for (j = 2; j <= Math.sqrt(i); j++) {
+        System.out.print("Prime numbers up to " + n + " are:");
+        for (i = 2; i <= n; i++) {
+            flag = 1;
+            for (j = 2; j < i; j++) {
                 if (i % j == 0) {
-                    flag = 1;
+                    flag = 0;
                     break;
                 }
             }
-            if (flag == 0) {
-                System.out.print(i + " ");
-                count++;
+            if (flag == 1) {
+                System.out.print(" " + i);
             }
         }
+        System.out.println();
     }
     public static void main(String args[]) {
         prime();
